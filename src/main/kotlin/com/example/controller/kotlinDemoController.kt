@@ -47,6 +47,5 @@ class ArticleController(private val articleRepository: ArticleRepository) {
             articleRepository.delete(article)
             ResponseEntity<Void>(HttpStatus.OK)
         }.orElse(ResponseEntity.notFound().build())
-
     }
 }
